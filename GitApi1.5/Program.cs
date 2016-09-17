@@ -17,7 +17,7 @@ namespace GitApi1._5
             var demo = new AsyncClass();
             demo.GitApi();
 
-            while (false)
+            while (true)
             {
                 Console.WriteLine("doing stuff on the main thread...........................");
             }

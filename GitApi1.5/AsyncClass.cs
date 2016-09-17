@@ -17,9 +17,18 @@ namespace GitApi1._5
                 await LongRunningOperation();
             });
         }
-        private static async Task LongRunningOperation()
+        private static async Task<string> LongRunningOperation()
         {
-            var owner = string.Empty;
+            int counter;
+
+            for (counter = 0; counter < 50000; counter++)
+            {
+                Console.WriteLine(counter);
+            }
+            return "counter = " + counter;
+        }
+            
+            /*var owner = string.Empty;
             var reponame = string.Empty;
 
             owner = "jennnyf19";
@@ -45,9 +54,8 @@ namespace GitApi1._5
                 Console.WriteLine("It has {0} open issues\n", repository.OpenIssuesCount);
 
                 Console.WriteLine("And GitHub thinks it is a {0} project", repository.Language);
-            });
+            });*/
 
 
         }
     }
-}
